@@ -53,9 +53,8 @@
           <label><strong>course number:</strong></label> {{ currentCourse.courseNumber }}
         </div>
         
-        <a 
-          :href="'/courses/' + currentCourse.id"
-        >
+        <a class="badge badge-warning"
+          :href="'/update/' + currentCourse.id" >
        <button  >Update</button>
         </a>
         <a 
@@ -63,6 +62,8 @@
         >
        <button  >Delete</button>
         </a>
+       
+
       </div>
       <div v-else>
         <br />
