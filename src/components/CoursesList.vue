@@ -49,10 +49,12 @@
         </div>
         
         <a class="badge badge-warning"
-          :href="'/courses/' + currentCourse.id"
+          :href="'/update/' + currentCourse.id"
         >
           Edit
         </a>
+       
+
       </div>
       <div v-else>
         <br />
