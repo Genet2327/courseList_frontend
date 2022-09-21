@@ -15,16 +15,21 @@
     </div>
     <div class="col-md-6">
       <h4>Courses List</h4>
-      <ul class="list-group">
-        <li class="list-group-item"
+      <table class="list-group"  >
+        <tr>
+          <th>Course Number</th>
+          <th>Course Name</th>
+        </tr>
+        <tr  class="list-group-item"
           :class="{ active: index == currentIndex }"
           v-for="(course, index) in courses"
           :key="index"
-          @click="setActiveCourse(course, index)"
-        >
-          {{ course.name }} 
-        </li>
-      </ul>
+          @click="setActiveCourse(course, index)">
+        <td>{{ course.courseNumber }} </td>
+          <td>{{ course.name }} </td>
+         
+      </tr>
+      </table>
       <button class="m-3 btn btn-sm btn-danger" @click="removeAllCourses">
         Remove All
       </button>
@@ -45,13 +50,18 @@
           <label><strong>Name:</strong></label> {{ currentCourse.name }}
         </div>
          <div>
-          <label><strong>Name:</strong></label> {{ currentCourse.name }}
+          <label><strong>course number:</strong></label> {{ currentCourse.courseNumber }}
         </div>
         
-        <a class="badge badge-warning"
+        <a 
           :href="'/courses/' + currentCourse.id"
         >
-          Edit
+       <button  >Update</button>
+        </a>
+        <a 
+          :href="'/courses/' + currentCourse.id"
+        >
+       <button  >Delete</button>
         </a>
       </div>
       <div v-else>
@@ -130,5 +140,9 @@ export default {
   text-align: left;
   max-width: 750px;
   margin: auto;
+}
+table, th, td {
+  border:0px solid black;
+  border-collapse: collapse;
 }
 </style>
