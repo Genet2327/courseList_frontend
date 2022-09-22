@@ -20,6 +20,16 @@ export default new Router({
       path: "/add",
       name: "add",
       component: () => import("./components/AddCourse")
+    },
+    {
+      path: "/update/:id",
+      name: "update",
+      component: () => import("./components/courseUpdate")
+    },
+    {
+      path: "/delete/:id",
+      name: "delete",
+      component: () => import("./components/courseDelete")
     }
   ]
 });
