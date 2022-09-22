@@ -54,12 +54,12 @@
         </div>
         
         <a 
-          :href="'/courses/' + currentCourse.id"
+          :href="'/update/' + currentCourse.id"
         >
        <button  >Update</button>
         </a>
         <a 
-          :href="'/courses/' + currentCourse.id"
+          :href="'/delete/' + currentCourse.id"
         >
        <button  >Delete</button>
         </a>
